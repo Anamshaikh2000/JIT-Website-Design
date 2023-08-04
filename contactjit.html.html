@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name=""viewport" content ="width=device-width , initial-scale=1.0">
+        <title>JIT WEBSITE DESIGN</title>
+        <link rel ="stylesheet" href ="stylejit.css">
+        <link rel = "stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <!-------Header------>
+        <section class =" sub-header">
+            <nav>
+                <a href ="index.html"><img src =" https://jit.edu.in/wp-content/uploads/2021/10/820x312.jpg"></a>
+                <div class = "nav-links" id ="navlinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href ="jitwebsite.html">HOME</a></li>
+                        <li><a href ="about.html.html">ABOUT</a></li>
+                        <li><a href ="">COURSE</a></li>
+                        <li><a href ="contactjit.html.html">CONTACT</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+     <h1>CONTACT US</h1>    
+        </section>
+
+        <!--------Contact------>
+
+        <section class="location">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56910.23727202381!2d81.1960102!3d26.9387069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3999604206b9c47b%3A0x1b1cc5b5bd1fc98b!2sBarabanki%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1684924118189!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+    
+        <section class="contact-us">
+            <div class="row">
+                <div class="contact-col">
+                        <i class="fa fa-home"></i>
+                    <div>
+                        <span>
+                            <h4>Fort, Jahangeerabad, Uttar Pradesh 225203</h4>
+                            <p>Barabanki,Lucknow, IN</p>
+                        </span>
+                </div>
+                <i class="fa fa-phone"></i>
+            <div>
+                <span>
+                    <h4>+91 9999955555</h4>
+                    <p>Monday to Saturday, 10AM to 6PM</p>
+                </span>
+            </div>
+        </div>
+        <i class="fa fa-envelop-o"></i>
+        <div>
+        <span>
+            <h4>info@jit.com</h4>
+            <p>Email us your query</p>
+        </span>
+    </div>
+        </section>
+             <section style="display: flex; justify-content:flex-end ; margin-top: -200px; margin-bottom:500ps;">
+                      </div class="contact-col"></div>
+                       <form action="handler.php" method="post" style="width: 500px;  list-style-type: none;">
+                        <li style="margin-bottom: 10px;"> <input type="text" name="name" placeholder="Enter your name" required style="width: 80%; height: 40px;"></li>
+                        <li style="margin-bottom: 10px;"> <input type="email" name="email" placeholder="Enter your email" required style="width:80%; height: 40px;"></li>
+                        <li style="margin-bottom: 10px;"> <input type="text" name="subject" placeholder="Enter your subject" required style="width: 80%; height: 40px;"></li>
+                        <li style="margin-bottom: 10px;"> <textarea rows="8" name="message" placeholder="Message" required style="width: 80%; height: 120px;"></textarea></li>
+                        <li style="margin-bottom: 10px;">
+                            <button type="submit" class="hero-btn red-btn" style="width: 30%; height: 30px; background-color: #81b8d8; color: #fcf7f7; font-size: 15px; border-radius: 10px; border: none; background-image: linear-gradient(to right, #4cabe2, #1f6f9b);">
+                              Send Message
+                            </button>
+                          </li>
+                        </form>
+                    </section>
+                       </form>
+                     </div>
+        </section>
+
+   
+
+
+
+<!-------Foooter-------->
+<section class ="footer">
+    
+        <div class ="icons">
+            <i class ="fa fa-facebook-square"></i>
+            <i class ="fa fa-twitter"></i>
+            <i class ="fa fa-instagram"></i>
+            <i class ="fa fa-linkedin"></i>
+        </div>
+         
+        
+</section>
+
+
+<script>
+    // Wait for the DOM to load
+    document.addEventListener("DOMContentLoaded", function() {
+      // Get all the menu items
+      const menuItems = document.querySelectorAll("header nav ul li a");
+    
+      // Loop through each menu item and add a click event listener
+      menuItems.forEach(function(menuItem) {
+        menuItem.addEventListener("click", function(event) {
+          // Prevent the default link behavior
+          event.preventDefault();
+    
+          // Get the href attribute of the clicked link
+          const page = this.getAttribute("href");
+    
+          // Load the page using JavaScript
+          fetch(page)
+            .then(function(response) {
+              return response.text();
+            })
+            .then(function(html) {
+              // Replace the current content with the loaded page's content
+              document.documentElement.innerHTML = html;
+            })
+            .catch(function(error) {
+              console.log("Error:", error);
+            });
+        });
+      });
+    });
+    </script>
+    
+
+
+
+
+
+
+
+    </body>
+</html>
